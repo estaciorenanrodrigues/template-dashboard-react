@@ -1,4 +1,4 @@
-import { products } from "../../shared/data/products"; 
+import { products } from "../../shared/data/products";
 import { ApexOptions } from "apexcharts";
 import React from "react";
 import ReactApexChart from "react-apexcharts";
@@ -21,7 +21,7 @@ export const ColumnCharts = () => {
     options: {
       chart: {
         type: "bar",
-        height: 200,
+        height: 253,
         toolbar: {
           show: false,
         },
@@ -46,9 +46,7 @@ export const ColumnCharts = () => {
         categories: products[0].monthlySales.map((sale) => sale.month),
       },
       yaxis: {
-        title: {
-
-        },
+        title: {},
       },
       fill: {
         opacity: 1,
@@ -58,6 +56,20 @@ export const ColumnCharts = () => {
         position: "right",
         horizontalAlign: "center",
       },
+      responsive: [
+        {
+          breakpoint: 1280,
+          options: {
+            chart: {
+              width: '100%',
+              height: 350,
+            },
+            legend: {
+              position: "bottom",
+            },
+          },
+        },
+      ],
     },
   });
 

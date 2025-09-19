@@ -9,8 +9,8 @@ export const Dashboard = () => {
   return (
     <Box>
       <Paper elevation={0}>
-        <Grid container spacing={3} marginY={2}>
-          <Grid size={{ xs: 12, md: 4 }}>
+        <Grid container spacing={3} marginY={2} >
+          <Grid size={{ xs: 12, md: 12, lg: 4 }}>
             <CardGraphics
               title="Resumo de Vendas"
               color="bg-green-500"
@@ -22,7 +22,7 @@ export const Dashboard = () => {
               })}
             />
           </Grid>
-          <Grid size={{ xs: 12, md: 4 }}>
+          <Grid size={{ xs: 12, md: 12, lg: 4 }}>
             <CardGraphics
               title="Produtos Mais Vendidos"
               color="bg-orange-500"
@@ -31,7 +31,7 @@ export const Dashboard = () => {
               subtitle={salesSummary.bestSellingProduct.name}
             />
           </Grid>
-          <Grid size={{ xs: 12, md: 4 }}>
+          <Grid size={{ xs: 12, md: 12, lg: 4 }}>
             <CardGraphics
               title="Mês com Maior Vendas"
               color="bg-yellow-500"
@@ -44,13 +44,13 @@ export const Dashboard = () => {
           </Grid>
         </Grid>
         <Grid container spacing={3} marginBottom={2}>
-          <Grid size={{ xs: 12, md: 5 }}>
+          <Grid size={{ xs: 12, md: 5, lg: 5 }}>
             <CardGraphics title="Vendas por categoria">
               <SimpleDonutCharts />
             </CardGraphics>
           </Grid>
 
-          <Grid size={{ xs: 12, md: 7 }}>
+          <Grid size={{ xs: 12, md: 7, lg: 7 }}>
             <CardGraphics title="Periodo de vendas por categoria">
               <ColumnCharts />
             </CardGraphics>

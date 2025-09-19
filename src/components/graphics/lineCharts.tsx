@@ -23,7 +23,7 @@ export const LineCharts = () => {
     options: {
       chart: {
         type: "area",
-        height: 190,
+        height: 350,
         toolbar: {
           show: false,
         },
@@ -76,6 +76,18 @@ export const LineCharts = () => {
       tooltip: {
         shared: true,
       },
+      responsive: [{
+        breakpoint: 1280,
+        options: {
+          chart: {
+            width: '100%',
+            height: 350,
+          },
+          legend: {
+            position: "bottom",
+          },
+        },
+      }],
     },
   });
 

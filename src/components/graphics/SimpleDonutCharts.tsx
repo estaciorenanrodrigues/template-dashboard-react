@@ -11,8 +11,8 @@ export const SimpleDonutCharts = () => {
     series: products.map((product) => product.totalSales),
     options: {
       chart: {
-        height: 212,
         type: "pie",
+        height: 263,
       },
       labels: products.map((product) => product.category),
       dataLabels: {
@@ -23,10 +23,14 @@ export const SimpleDonutCharts = () => {
           position: "right",
       },
       responsive: [{
-        breakpoint: 480,
+        breakpoint: 1280,
         options: {
           chart: {
-            width: 200
+            width: '100%',
+            height: 350,
+          },
+          legend: {
+            position: "bottom",
           },
         }
       }]
